@@ -1,0 +1,582 @@
+/* ========================= */
+/* RESET */
+/* ========================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#0F172A;
+color:white;
+overflow-x:hidden;
+}
+
+body {
+    background: radial-gradient(circle at top, #0F172A, #050814);
+}
+
+/* ========================= */
+/* BARRA DE PROGRESSO */
+/* ========================= */
+
+.progresso-container{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:8px;
+background:#1f314d;
+z-index:9999;
+}
+
+.progresso{
+height:100%;
+width:5%;
+background:linear-gradient(
+90deg,
+#1eb455,
+#32b6a0
+);
+transition:1s;
+}
+
+/* ========================= */
+/* FASES */
+/* ========================= */
+
+.fase{
+display:none;
+min-height:100vh;
+padding:100px 20px;
+text-align:center;
+}
+
+.ativa{
+display:block;
+}
+
+/* ========================= */
+/* HERO */
+/* ========================= */
+
+.hero{
+max-width:900px;
+margin:auto;
+padding-top:100px;
+}
+
+.hero h1{
+font-family:'Rajdhani',sans-serif;
+font-size:4rem;
+margin-bottom:20px;
+color:#2e9955;
+}
+
+.hero p{
+font-size:1.3rem;
+max-width:700px;
+margin:auto;
+line-height:1.8;
+}
+
+/* ========================= */
+/* TÍTULOS */
+/* ========================= */
+
+h1,h2,h3{
+margin-bottom:20px;
+}
+
+h1,h2,h3{
+    font-family:'Rajdhani',sans-serif;
+}
+
+h2{
+font-family:'Rajdhani',sans-serif;
+font-size:2.2rem;
+color:#35cf75;
+}
+
+.descricao{
+max-width:700px;
+margin:auto;
+line-height:1.8;
+margin-bottom:30px;
+}
+
+/* ========================= */
+/* BOTÕES */
+/* ========================= */
+
+button{
+background:#13813c;
+color:white;
+border:none;
+padding:12px 25px;
+border-radius:12px;
+cursor:pointer;
+font-size:1rem;
+margin-top:20px;
+transition:.3s;
+}
+
+button:hover{
+transform:translateY(-3px);
+background:#16A34A;
+}
+
+.acoes-fase{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+margin-top:25px;
+}
+
+/* ========================= */
+/* CENTRO DE CONHECIMENTO */
+/* ========================= */
+
+.abas{
+display:flex;
+justify-content:center;
+gap:10px;
+flex-wrap:wrap;
+margin:30px 0;
+}
+
+.abas button{
+margin:0;
+}
+
+.conteudo-box{
+max-width:900px;
+margin:auto;
+background:#1E293B;
+padding:30px;
+border-radius:20px;
+border:1px solid #334155;
+min-height:280px;
+text-align:left;
+}
+
+.conteudo-box ul{
+padding-left:20px;
+line-height:2;
+}
+
+.aba-conteudo{
+display:none;
+}
+
+.ativa-aba{
+display:block;
+}
+
+/* ========================= */
+/* DIAGNÓSTICO */
+/* ========================= */
+
+.titulo-indicador{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:8px;
+font-weight:bold;
+font-size:1.1rem;
+}
+
+.indicador{
+width:80%;
+max-width:700px;
+margin:25px auto;
+text-align:left;
+}
+
+.barra1{
+width:100%;
+height:25px;
+background:#334155;
+border-radius:30px;
+overflow:hidden;
+margin-top:8px;
+}
+
+.barra1 div{
+height:100%;
+width:25%;
+background:#22C55E;
+border-radius:30px;
+}
+
+.barra2{
+width:100%;
+height:25px;
+background:#334155;
+border-radius:30px;
+overflow:hidden;
+margin-top:8px;
+}
+
+.barra2 div{
+height:100%;
+width:15%;
+background:#22C55E;
+border-radius:30px;
+}
+
+.barra3{
+width:100%;
+height:25px;
+background:#334155;
+border-radius:30px;
+overflow:hidden;
+margin-top:8px;
+}
+
+.barra3 div{
+height:100%;
+width:10%;
+background:#22C55E;
+border-radius:30px;
+}
+
+.barra1 div,
+.barra2 div,
+.barra3 div {
+    transition: width 0.8s ease;
+}
+
+/* ========================= */
+/* CARDS */
+/* ========================= */
+
+.cards{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-top:30px;
+}
+
+.card{
+background:#1E293B;
+width:280px;
+padding:25px;
+border-radius:20px;
+cursor:pointer;
+transition:.4s;
+border:1px solid #334155;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card.usado{
+background:#166534;
+border:1px solid #4ADE80;
+}
+
+.card p{
+line-height:1.6;
+}
+
+.card:active {
+    transform: scale(0.97);
+}
+
+/* ========================= */
+/* CENÁRIO */
+/* ========================= */
+
+.cenario{
+position:relative;
+width:90%;
+max-width:1000px;
+height:500px;
+margin:30px auto;
+overflow:hidden;
+border-radius:20px;
+border:2px solid #334155;
+}
+/* ========================= */
+/* ANTES E DEPOIS */
+/* ========================= */
+
+.comparacao{
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+margin:30px auto;
+}
+
+.foto{
+width:420px;
+}
+
+.foto h3{
+margin-bottom:10px;
+}
+
+.foto img{
+width:100%;
+height:260px;
+object-fit:cover;
+border-radius:20px;
+border:3px solid #334155;
+box-shadow:0 0 20px rgba(0,0,0,.3);
+transition:.4s;
+}
+
+.foto img:hover{
+transform:scale(1.03);
+}
+
+/* ========================= */
+/* PAINEL CIENTÍFICO */
+/* ========================= */
+
+.painel-cientifico{
+background:#1E293B;
+max-width:500px;
+margin:30px auto;
+padding:25px;
+border-radius:20px;
+border:1px solid #334155;
+}
+
+.painel-cientifico p{
+margin:10px 0;
+font-size:1.1rem;
+}
+
+/* ========================= */
+/* CONQUISTAS */
+/* ========================= */
+
+#conquistas{
+margin-top:30px;
+font-size:1.1rem;
+line-height:2;
+}
+
+#conquistas {
+    background: #1E293B;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #334155;
+}
+
+/* ========================= */
+/* CERTIFICADO */
+/* ========================= */
+
+.certificado{
+background:white;
+color:black;
+max-width:900px;
+margin:auto;
+padding:50px;
+border-radius:20px;
+box-shadow:0 0 30px rgba(0,0,0,.3);
+}
+
+.certificado h1{
+font-family:'Rajdhani',sans-serif;
+font-size:3rem;
+color:#15803D;
+}
+
+.certificado h2{
+color:#15803D;
+}
+
+.certificado p{
+line-height:1.8;
+margin:15px 0;
+}
+
+.dados-certificado{
+margin:30px 0;
+}
+
+.selos{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+margin-top:20px;
+}
+
+.selo{
+background:#DCFCE7;
+padding:15px;
+border-radius:12px;
+font-weight:bold;
+}
+
+/* ========================= */
+/* RODAPÉ */
+/* ========================= */
+
+.rodape{
+background:#020617;
+padding:30px;
+text-align:center;
+line-height:1.8;
+border-top:1px solid #334155;
+}
+
+/* ========================= */
+/* RESPONSIVO */
+/* ========================= */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:2.5rem;
+}
+
+.cards{
+flex-direction:column;
+align-items:center;
+}
+
+.card{
+width:90%;
+}
+
+.cenario{
+height:400px;
+}
+
+.arvore{
+font-size:65px;
+}
+
+.certificado{
+padding:25px;
+}
+
+}
+
+.fase {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+.fase.ativa {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ========================= */
+/* 🌍 SCORE SYSTEM */
+/* ========================= */
+
+.score-box {
+    background: #1E293B;
+    max-width: 320px;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid #334155;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #22C55E;
+    transition: 0.4s;
+}
+
+/* ========================= */
+/* 🌱 NÍVEL DO AMBIENTE */
+/* ========================= */
+
+.nivel-ambiente {
+    margin-top: 20px;
+    padding: 15px;
+    background: #0F172A;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    font-size: 1.1rem;
+}
+
+/* ========================= */
+/* 🎮 TRANSIÇÃO GAME STYLE */
+/* ========================= */
+
+.fase {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+.fase.ativa {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ========================= */
+/* 🎯 FEEDBACK DE CLIQUE */
+/* ========================= */
+
+.card:active {
+    transform: scale(0.97);
+}
+
+.barra1 div,
+.barra2 div,
+.barra3 div {
+    transition: width 0.8s ease;
+}
+
+/* ========================= */
+/* 🌿 FUNDO MAIS VIVO */
+/* ========================= */
+
+body {
+    background: radial-gradient(circle at top, #0F172A, #050814);
+}
+
+#particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.impacto {
+    animation: impactoAnim 0.4s ease;
+}
+
+@keyframes impactoAnim {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); filter: brightness(1.3); }
+    100% { transform: scale(1); }
+}
+
+.fase.ativa {
+    animation: entrarFase 0.6s ease;
+}
+
+@keyframes entrarFase {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(20px);
+        filter: blur(5px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+        filter: blur(0);
+    }
+}
+

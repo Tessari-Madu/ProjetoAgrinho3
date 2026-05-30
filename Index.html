@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Missão Recuperar o Campo</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Barra de progresso -->
+<div class="progresso-container">
+    <div id="progresso" class="progresso"></div>
+</div>
+
+
+<!-- ========================= -->
+<!-- FASE 1 -->
+<!-- ========================= -->
+
+<section id="fase1" class="fase ativa">
+
+    <div class="hero">
+
+        <h1>MISSÃO RECUPERAR O CAMPO</h1>
+
+        <p>
+            Utilize a biotecnologia para transformar uma área degradada
+            em um ecossistema sustentável.
+        </p>
+
+        <button onclick="irParaFase(2)">
+            Conhecer o Tema
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- FASE 2 -->
+<!-- ========================= -->
+
+<section id="fase2" class="fase">
+
+    <h1>📚 Centro de Conhecimento</h1>
+
+    <p class="descricao">
+        Explore os conceitos antes de iniciar a recuperação ambiental.
+    </p>
+
+    <div class="abas">
+
+        <button onclick="mostrarAba('bioTec')">
+            🌄 Biotecnologia
+        </button>
+
+        <button onclick="mostrarAba('biorremediacao')">
+            🍃 Biorremediação
+        </button>
+
+        <button onclick="mostrarAba('biofertilizantes')">
+            🌿 Biofertilizantes
+        </button>
+
+        <button onclick="mostrarAba('reflorestamento')">
+            🌳 Reflorestamento
+        </button>
+
+        <button onclick="mostrarAba('beneficios')">
+            📈 Benefícios
+        </button>
+
+    </div>
+
+    <div class="conteudo-box">
+
+        <div id="bioTec" class="aba-conteudo ativa-aba">
+
+            <h2> ​​O que é Biotecnologia?</h2>
+
+            <p>
+                Biotecnologia é a área da ciência que utiliza seres vivos ou suas partes para desenvolver produtos e soluções úteis.
+Ela envolve áreas como biologia, genética e química.
+É usada na saúde, agricultura, indústria e meio ambiente.
+Seu objetivo é melhorar a qualidade de vida e resolver problemas do mundo.
+            </p>
+
+        </div>
+
+        <div id="biorremediacao" class="aba-conteudo">
+
+            <h2>O que é Biorremediação?</h2>
+
+            <p>
+               Biorremediação é o uso de seres vivos, principalmente microrganismos, para limpar ambientes contaminados.
+Ela atua na degradação de poluentes como óleo, metais pesados e produtos químicos.
+Esses organismos transformam substâncias tóxicas em menos prejudiciais.
+É uma forma natural e sustentável de recuperar o meio ambiente.
+            </p>
+
+        </div>
+
+        <div id="biofertilizantes" class="aba-conteudo">
+
+            <h2>O que é Biofertilizantes?</h2>
+
+            <p>
+               Biofertilizantes são produtos naturais feitos a partir de microrganismos e matéria orgânica que ajudam a nutrir o solo e as plantas.
+Eles melhoram a fertilidade do solo e aumentam o crescimento das culturas.
+Podem substituir ou reduzir o uso de fertilizantes químicos.
+São uma alternativa mais sustentável e menos poluente para a agricultura.
+            </p>
+
+        </div>
+
+        <div id="reflorestamento" class="aba-conteudo">
+
+            <h2>O que é Reflorestamento?</h2>
+
+            <p>
+               Reflorestamento é o processo de plantar árvores em áreas onde a vegetação foi destruída ou degradada.
+Ele ajuda a recuperar florestas, solos e habitats naturais.
+Também contribui para a redução do aquecimento global, pois absorve gás carbônico.
+É uma ação importante para preservar o meio ambiente e a biodiversidade.
+            </p>
+
+        </div>
+
+        <div id="beneficios" class="aba-conteudo">
+
+           <h2> Benefícios</h2>
+
+            <ul>
+                <li>Recuperação de solos</li>
+                <li>Água mais limpa</li>
+                <li>Maior biodiversidade</li>
+                <li>Menor poluição</li>
+                <li>Agricultura sustentável</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <button onclick="irParaFase(3)">
+        📊 Ir para Diagnóstico
+    </button>
+
+</section>
+<!-- ========================= -->
+<!-- FASE 3 - DIAGNÓSTICO -->
+<!-- ========================= -->
+
+<section id="fase3" class="fase">
+
+    <h2>📊 Diagnóstico Ambiental</h2>
+
+    <div class="score-box">
+    🌍 Índice Verde: <span id="scoreValor">20%</span>
+</div>
+
+    <p class="descricao">
+        Antes da recuperação, os indicadores ambientais estão em níveis críticos.
+    </p>
+
+    <div class="indicador">
+
+    <div class="titulo-indicador">
+        <span>🌱 Solo</span>
+        <span id="soloPorcentagem">25%</span>
+    </div>
+
+    <div class="barra1">
+        <div id="soloBar"></div>
+    </div>
+
+</div>
+
+<div class="indicador">
+
+    <div class="titulo-indicador">
+        <span>💧 Água</span>
+        <span id="aguaPorcentagem">15%</span>
+    </div>
+
+    <div class="barra2">
+        <div id="aguaBar"></div>
+    </div>
+
+</div>
+
+<div class="indicador">
+
+    <div class="titulo-indicador">
+        <span>​🌺​ Biodiversidade</span>
+        <span id="bioPorcentagem">10%</span>
+    </div>
+
+    <div class="barra3">
+        <div id="bioBar"></div>
+    </div>
+
+</div>
+
+    <button onclick="irParaFase(4)">
+        ​​ Aplicar Tecnologias
+    </button>
+
+</section>
+
+<!-- ========================= -->
+<!-- FASE 4 - TECNOLOGIAS -->
+<!-- ========================= -->
+
+<section id="fase4" class="fase">
+
+    <h2> Aplicar Tecnologias</h2>
+
+    <p class="descricao">
+        Escolha as tecnologias necessárias para recuperar a área degradada.
+    </p>
+
+    <div class="cards">
+
+        <div class="card" onclick="aplicar('solo', this)">
+
+            <h3>🌿 Biofertilizantes</h3>
+
+            <p>
+                Melhoram a fertilidade do solo,
+                aumentando nutrientes essenciais.
+            </p>
+
+        </div>
+
+        <div class="card" onclick="aplicar('agua', this)">
+
+            <h3>🍃 Biorremediação</h3>
+
+            <p>
+                Microrganismos removem contaminantes
+                do solo e da água.
+            </p>
+
+        </div>
+
+        <div class="card" onclick="aplicar('bio', this)">
+
+            <h3>🌳 Reflorestamento</h3>
+
+            <p>
+                Recupera áreas degradadas e aumenta
+                a biodiversidade.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="acoes-fase">
+
+        <button onclick="irParaFase(3)">
+            ⬅️ Voltar
+        </button>
+
+        <button onclick="irParaFase(5)">
+            🌎 Ver Recuperação
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- FASE 5 - RECUPERAÇÃO -->
+<!-- ========================= -->
+
+<section id="fase5" class="fase">
+
+    <h2>🌎 Recuperação Ambiental</h2>
+
+    <p class="descricao">
+        Veja o resultado das tecnologias aplicadas.
+    </p>
+
+    <!-- COMPARAÇÃO ANTES E DEPOIS -->
+
+    <div class="comparacao">
+
+        <div class="foto">
+
+            <h3>❌ Antes</h3>
+
+            <img
+                src="img/area degradada.png"
+                alt="Área degradada">
+
+        </div>
+
+        <div class="foto">
+
+            <h3>✅ Depois</h3>
+
+            <img
+                src="img/area verde.png"
+                alt="Área recuperada">
+
+        </div>
+
+    </div>
+
+    
+    <div class="painel-cientifico">
+
+        <h3>📡 Sensores Ambientais</h3>
+
+        <p id="umidade">
+            💧 Umidade: 20%
+        </p>
+
+        <p id="ph">
+            🧪 pH: 5.0
+        </p>
+
+        <p id="nutrientes">
+            🌱 Nutrientes: Baixo
+        </p>
+
+    </div>
+
+    <div id="conquistas"></div>
+
+    <div id="nivelAmbiente" class="nivel-ambiente">
+    🌱 Estado do Ecossistema: <span id="nivelTexto">Degradado</span>
+</div>
+
+    <div class="acoes-fase">
+
+        <button onclick="irParaFase(4)">
+            ⬅️ Voltar
+        </button>
+
+        <button onclick="finalizarMissao()">
+            🏆 Concluir Missão
+        </button>
+
+    </div>
+
+</section>
+<!-- ========================= -->
+<!-- FASE 6 - CERTIFICADO -->
+<!-- ========================= -->
+
+<section id="fase6" class="fase">
+
+    <div class="certificado">
+
+        <h1>🏆 CERTIFICADO DE RECUPERAÇÃO AMBIENTAL</h1>
+
+        <p>
+            Este certificado comprova que o participante concluiu
+            com sucesso a missão de recuperação ambiental. Desenvolvido para demonstrar como a biotecnologia pode ajudar
+        na recuperação de áreas degradadas.
+        </p>
+
+        <div class="dados-certificado">
+
+            <h2>🌱 Missão Concluída</h2>
+
+            <p>
+                Biotecnologia e Recuperação Ambiental no Campo
+            </p>
+
+            <h3>Índice Verde: 100%</h3>
+
+        </div>
+
+        <div class="selos">
+
+            <div class="selo">
+                🌿 Solo Recuperado
+            </div>
+
+            <div class="selo">
+                💧 Água Restaurada
+            </div>
+
+            <div class="selo">
+                🌺​ Biodiversidade Recuperada
+            </div>
+
+        </div>
+
+        <div class="acoes-certificado">
+
+            <button onclick="window.print()">
+                ​📥​ Imprimir Certificado
+            </button>
+
+            <button onclick="location.reload()">
+                🔄 Reiniciar Missão
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- RODAPÉ -->
+<!-- ========================= -->
+
+<footer class="rodape">
+
+    <p>
+        🌎 Projeto Agrinho — Biotecnologia e Recuperação Ambiental no Campo
+    </p>
+
+    <p>
+        Desenvolvido por Maria Eduarda Tessari.
+    </p>
+
+</footer>
+<canvas id="particles"></canvas>
+<script src="script.js"></script>
+
+</body>
+</html>
